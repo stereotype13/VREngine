@@ -1,5 +1,6 @@
 #include "OpenGLApp.h"
 
+
 namespace VR { namespace core {
 
 	OpenGLApp::OpenGLApp(String title) : mTitle{title} {
@@ -17,6 +18,15 @@ namespace VR { namespace core {
 		}
 
 		glfwMakeContextCurrent(mWindow);
+
+		GLenum err = glewInit();
+		if (GLEW_OK != err)
+		{
+			/* Problem: glewInit failed, something is seriously wrong. */
+			fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
+
+		}
+		fprintf(stdout, "Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));
 
 	}
 

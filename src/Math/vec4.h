@@ -1,6 +1,8 @@
 #pragma once
 
+
 #include <GL\glew.h>
+
 
 namespace VR {
 	namespace math {

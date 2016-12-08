@@ -1,14 +1,15 @@
 ﻿  Renderable.cpp
   Renderer.cpp
   ShaderSimple.cpp
-src\Graphics\ShaderSimple.cpp(20): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   main.cpp
   OpenGLApp.cpp
   mat4.cpp
   vec3.cpp
   vec4.cpp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  All 76 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 132 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
-  VREngine.vcxproj -> c:\Users\rhodel\documents\visual studio 2015\Projects\VREngine\VREngine\.\bin\x64\Release\core.exe
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\rhodel\documents\visual studio 2015\Projects\VREngine\VREngine\bin\x64\Release\vc120.pdb'; linking object as if no debug info
+  VREngine.vcxproj -> C:\Users\rhodel\documents\visual studio 2015\Projects\VREngine\VREngine\.\bin\x64\Release\core.exe
   VREngine.vcxproj -> .\bin\x64\Release\core.pdb (Full PDB)

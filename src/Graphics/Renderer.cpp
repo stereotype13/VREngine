@@ -2,6 +2,11 @@
 
 namespace VR { namespace core {
 
+Renderer::Renderer(Shader* shader) {
+	glGenVertexArrays(1, &mVAO);
+	mShader = shader;
+}
+
 void Renderer::Add(Renderable* renderable) {
 	mRenderables.push_back(renderable);
 }
@@ -10,7 +15,11 @@ Renderer::~Renderer() {
 	for (auto& renderable : mRenderables) {
 		delete renderable;
 	}
+
+	if (mShader)
+		delete mShader;
 }
+
 
 
 } }

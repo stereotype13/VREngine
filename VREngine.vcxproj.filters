@@ -74,5 +74,15 @@
     <ClInclude Include="src\Graphics\ShaderSimple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\include\GL\gl3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\x64\glew32s.lib" />
+    <Library Include="lib\x64\glfw3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Graphics\Shaders\SimpleVertexShader.vertex" />
   </ItemGroup>
 </Project>

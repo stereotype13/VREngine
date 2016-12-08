@@ -1,6 +1,7 @@
 #pragma once
 
 #include "..\common.h"
+
 #include <GL\glew.h>
 
 namespace VR {
@@ -11,6 +12,7 @@ namespace VR {
 			String mVertexShaderSource;
 			String mFragmentShaderSource;
 			GLuint mVertexShader, mFragmentShader;
+			GLuint mShaderProgram;
 
 
 		public:
