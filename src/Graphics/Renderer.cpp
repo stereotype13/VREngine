@@ -4,6 +4,7 @@ namespace VR { namespace core {
 
 Renderer::Renderer(Shader* shader) {
 	glGenVertexArrays(1, &mVAO);
+	glGenBuffers(1, &mEBO);
 	mShader = shader;
 }
 

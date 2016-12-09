@@ -20,6 +20,7 @@ namespace VR {
 			virtual bool loadFragmentShaderSource(String path) = 0;
 			//Override this to compile and use the shader
 			virtual bool Init() = 0;
+			virtual GLuint getShaderProgram() = 0;
 		};
 	}
 }

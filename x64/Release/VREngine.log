@@ -1,15 +1,10 @@
-﻿  Renderable.cpp
-  Renderer.cpp
-  ShaderSimple.cpp
-  main.cpp
-  OpenGLApp.cpp
-  mat4.cpp
-  vec3.cpp
-  vec4.cpp
+﻿  OpenGLApp.cpp
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  All 132 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  31 of 379 functions ( 8.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\rhodel\documents\visual studio 2015\Projects\VREngine\VREngine\bin\x64\Release\vc120.pdb'; linking object as if no debug info
-  VREngine.vcxproj -> C:\Users\rhodel\documents\visual studio 2015\Projects\VREngine\VREngine\.\bin\x64\Release\core.exe
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\rhodel\Documents\Visual Studio 2015\Projects\VREngine\VREngine\bin\x64\Release\vc120.pdb'; linking object as if no debug info
+  VREngine.vcxproj -> C:\Users\rhodel\Documents\Visual Studio 2015\Projects\VREngine\VREngine\.\bin\x64\Release\core.exe
   VREngine.vcxproj -> .\bin\x64\Release\core.pdb (Full PDB)

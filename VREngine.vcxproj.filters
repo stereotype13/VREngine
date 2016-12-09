@@ -39,6 +39,12 @@
     <ClCompile Include="src\Graphics\ShaderSimple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Graphics\Renderer2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application\Application.h">
@@ -77,6 +83,12 @@
     <ClInclude Include="src\include\GL\gl3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Graphics\Renderer2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\x64\glew32s.lib" />
@@ -84,5 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Graphics\Shaders\SimpleVertexShader.vertex" />
+    <None Include="src\Graphics\Shaders\SimpleFragmentShader.fragment" />
   </ItemGroup>
 </Project>

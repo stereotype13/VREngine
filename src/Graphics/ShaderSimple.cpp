@@ -4,9 +4,23 @@
 namespace VR {
 	namespace core {
 
+		ShaderSimple::ShaderSimple(const String& vertexShaderSourcePath, const String& fragmentShaderSourcePath, std::vector<VertexAttribute>& shaderAttributes) {
+			if (!loadVertexShaderSource(vertexShaderSourcePath)) {
+				LOG("Error loading vertex shader source code.");
+				return;
+			}
+
+			if (!loadFragmentShaderSource(fragmentShaderSourcePath)) {
+				LOG("Error loading fragment shader source code.");
+				return;
+			}
+
+			setShaderAttributes(shaderAttributes);
+		}
+
 		String ShaderSimple::loadSource(String path) {
 			FILE* file;
-			//char* buffer = NULL;
+	
 			size_t fileLength, readLength;
 			file = fopen(path.c_str(), "r");
 			if (!file) {
@@ -17,7 +31,7 @@ namespace VR {
 			fileLength = ftell(file);
 			fseek(file, 0, SEEK_SET);
 			String buffer(fileLength, 0);
-			//buffer = (char*)malloc(sizeof(char) * (fileLength + 1));
+	
 			readLength = fread(&buffer[0], 1, fileLength, file);
 			buffer[fileLength] = '\0';
 			fclose(file);
@@ -49,7 +63,7 @@ namespace VR {
 			return false;
 		}
 
-		void ShaderSimple::setShaderAttributes(const std::vector<String>& attributes) {
+		void ShaderSimple::setShaderAttributes(const std::vector<VertexAttribute>& attributes) {
 			mShaderAttributes = attributes;
 		}
 
@@ -57,10 +71,7 @@ namespace VR {
 			int isCompiled;
 			int maxLength;
 			int isLinked;
-
-		
-			//glBindVertexArray(vaoID);
-
+				
 			//Compile vertex shader
 			mVertexShader = glCreateShader(GL_VERTEX_SHADER);
 			const char* vertexShaderSource = mVertexShaderSource.c_str();
@@ -116,9 +127,12 @@ namespace VR {
 			glAttachShader(mShaderProgram, mFragmentShader);
 
 			//Set any and all attributes
-			for (int i = 0; i < mShaderAttributes.size(); ++i) {
-				glBindAttribLocation(mShaderProgram, i, mShaderAttributes[i].c_str());
+			/*
+			for (const auto& vertexAttribute : mShaderAttributes) {
+				glVertexAttribPointer(vertexAttribute.index, vertexAttribute.size, vertexAttribute.type, vertexAttribute.normalized, vertexAttribute.stride, vertexAttribute.pointer);
+				glEnableVertexAttribArray(vertexAttribute.index);
 			}
+			*/
 
 			glLinkProgram(mShaderProgram);
 
@@ -136,9 +150,13 @@ namespace VR {
 				return false;
 			}
 
-			glUseProgram(mShaderProgram);
+			//glUseProgram(mShaderProgram);
 
 			return true;
+		}
+
+		GLuint ShaderSimple::getShaderProgram() {
+			return mShaderProgram;
 		}
 	}
 }

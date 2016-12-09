@@ -145,8 +145,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Graphics\Rectangle.cpp" />
     <ClCompile Include="src\Graphics\Renderable.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
+    <ClCompile Include="src\Graphics\Renderer2d.cpp" />
     <ClCompile Include="src\Graphics\ShaderSimple.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Application\OpenGLApp.cpp" />
@@ -158,8 +160,10 @@
     <ClInclude Include="src\Application\Application.h" />
     <ClInclude Include="src\Application\OpenGLApp.h" />
     <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\Graphics\Rectangle.h" />
     <ClInclude Include="src\Graphics\Renderable.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
+    <ClInclude Include="src\Graphics\Renderer2d.h" />
     <ClInclude Include="src\Graphics\Shader.h" />
     <ClInclude Include="src\Graphics\ShaderSimple.h" />
     <ClInclude Include="src\Graphics\Vertex.h" />
@@ -173,6 +177,7 @@
     <Library Include="lib\x64\glfw3.lib" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="src\Graphics\Shaders\SimpleFragmentShader.fragment" />
     <None Include="src\Graphics\Shaders\SimpleVertexShader.vertex" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
